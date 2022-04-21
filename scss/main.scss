@@ -1,0 +1,341 @@
+@use "mixins";
+@use "variables";
+
+  @font-face {
+      font-family: Baiti;
+      src: url(../assets/fonts/msyi.ttf);
+  }
+  @font-face {
+    font-family: Century;
+    src: url(../assets/fonts/CENTURY.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+    color: variables.$light-grey;
+}
+header {
+    min-height: 40px;
+    height: 5vh;
+    background-color: variables.$dark-grey;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    z-index: 1000;
+    @include mixins.tablet {
+        justify-content: space-between;
+        padding: 0 50px 0 50px;
+    }
+    .burger-container {
+        height: 50%;
+        padding-right: 15px;
+        width: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include mixins.tablet {
+            display: none;
+        }
+
+        .burger {
+            height: 20%;
+            width: 100%;
+            background-color: variables.$light-grey;
+        }
+    }
+    .logo-container {
+        display: none;
+        @include mixins.tablet {
+            display: block;
+            height: 90%;
+        img {
+            height: 100%;
+        }
+        }
+        
+    }
+    nav {
+        display: none;
+        @include mixins.tablet {
+            display: block;
+            width: 70%;
+            .nav-items {
+                display: flex;
+                justify-content: space-between;
+
+                p {
+                    font-family: Baiti;
+                    font-size: 29pt;
+                    color: #000000;
+                }
+            }
+        }
+        @include mixins.desktop {
+            width: 40%;
+        }
+    }
+}
+.hero {
+    height: 95vh;
+    width: 100%;
+    background-image: url(../assets/backgrounds/hero\ bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .hero-logo-container {
+        height: 40%;
+        img {
+            height: 100%;
+        }
+    }
+}
+.about-container {
+    height: 100vh;
+    width: 100%;
+        background-image: url(../assets/backgrounds/info\ bg.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: end;
+
+    .about {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        justify-content: center;
+        @include mixins.tablet {
+            justify-content: end;
+        }
+        .title-info-container {
+            height: 100%;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            @include mixins.tablet {
+                height: 23%;
+                width: 50%;
+                margin: 0px 25px 0 0;
+            }
+            @include mixins.desktop {
+                margin: 0 25px 0 0;
+                width: 30%;
+            }
+    
+            .about-title-container {
+                width: 75%;
+                background-color: variables.$light-grey;
+                opacity: 50%;
+                padding: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include mixins.tablet {
+                    margin-bottom: 40px;
+                }
+                @include mixins.desktop {
+                    margin-bottom: 50px;
+                }
+                p {
+                    font-family: Century;
+                    font-size: 18pt;
+                }
+            }
+            .about-info-container {
+                background-color: variables.$light-grey;
+                opacity: 50%;
+                border: 2px solid variables.$red;
+                padding: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                p {
+                    font-family: Century;
+                    font-size: 11pt;
+                }
+            }
+        }
+    }
+}
+
+.products {
+    height: 100vh;
+    background-color: variables.$light-grey;
+
+    .products-header {
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mixins.tablet {
+            
+        }
+        .products-info-container {
+            width: 50%;
+            background-color: variables.$dark-grey;
+            border: 2px solid variables.$red;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include mixins.tablet {
+                width: 25%;
+            }
+
+            p {
+                color: variables.$light-grey;
+                font-family: Century;
+                font-size: 18pt;
+            }
+        }
+    }
+    .products-container {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @include mixins.tablet {
+            flex-direction: row;
+        }
+
+        .item {
+            height: 40%;
+            width: 33%;
+            background-color: variables.$dark-grey;
+            border: 2px solid variables.$red;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            @include mixins.desktop {
+                width: 25%;
+            }
+
+            .item-img-container {
+                height: 50%;
+                @include mixins.tablet {
+                    display: flex;
+                    justify-content: center;
+                }
+                
+                img {
+                    height: 100%;
+                    width: 100%;
+                    @include mixins.tablet {
+                        width: 80%;
+                    }
+                    @include mixins.desktop {
+                        width: 100%;
+                    }
+                }
+            }
+            .info-button-container {
+                height: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .product-name, .product-info {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    color: variables.$light-grey;
+                    font-family: Century;
+                    font-size: 11pt;
+                }
+            }
+            .product-button {
+                background-color: rgb(4, 202, 4);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+                width: 100%;
+                @include mixins.tablet {
+                    width: 200%;
+                }
+                p {
+                    color: black;
+                    font-family: Century;
+                    font-size: 11pt;
+                }
+            }
+        }
+    }
+}
+footer {
+    height: 30vh;
+    background-color: variables.$dark-grey;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .footer-container {
+        height: 30%;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .contact-container {
+            height: 100%;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            @include mixins.tablet {
+                height: 80%;
+                width: 15%;
+                
+            }
+            @include mixins.desktop {
+                height: 80%;
+                width: 10%;
+            }
+
+            p {
+                color: variables.$light-grey;
+                font-family: Century;
+                font-size: 11pt;
+                @include mixins.tablet {
+                    text-align: left;
+                }
+            }
+        }
+        .social-container {
+            height: 100%;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            .social-img-container {
+                height: 40%;
+                
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
