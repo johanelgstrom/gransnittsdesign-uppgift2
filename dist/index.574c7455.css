@@ -228,6 +228,7 @@ header nav {
   border: 2px solid red;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
   padding: 10px;
   display: flex;
 }
@@ -269,9 +270,16 @@ header nav {
   display: flex;
 }
 
+@media screen and (min-width: 641px) {
+  .products .products-container .item {
+    padding: 10px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .products .products-container .item {
     width: 25%;
+    padding: 10px;
   }
 }
 
@@ -342,6 +350,70 @@ header nav {
   color: #000;
   font-family: Century;
   font-size: 11pt;
+}
+
+.contact {
+  height: 70vh;
+  background-color: #6b6b6b;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+}
+
+.contact .contact-header p {
+  color: #ccc;
+  font-family: Baiti;
+  font-size: 29pt;
+}
+
+.contact .contact-form-container {
+  width: 75%;
+  height: 50%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+
+.contact .contact-form-container .name {
+  width: 50%;
+  padding: 10px;
+  font-family: Century;
+  font-size: 11pt;
+}
+
+@media screen and (min-width: 1024px) {
+  .contact .contact-form-container .name {
+    height: 0%;
+  }
+}
+
+.contact .contact-form-container .email {
+  width: 75%;
+  padding: 10px;
+  font-family: Century;
+  font-size: 11pt;
+}
+
+.contact .contact-form-container .content {
+  width: 100%;
+  height: 30%;
+  padding: 10px;
+  font-family: Century;
+  font-size: 11pt;
+}
+
+.contact .contact-form-container button {
+  width: 100%;
+  color: #000;
+  background-color: #04ca04;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-family: Century;
+  font-size: 11pt;
+  display: flex;
 }
 
 footer {
