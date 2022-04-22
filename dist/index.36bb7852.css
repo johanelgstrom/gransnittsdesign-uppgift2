@@ -1,11 +1,11 @@
 @font-face {
   font-family: Baiti;
-  src: url("msyi.561a218e.ttf");
+  src: url("msyi.561a218e.f55c3ead.ttf");
 }
 
 @font-face {
   font-family: Century;
-  src: url("CENTURY.91d0f4eb.ttf");
+  src: url("CENTURY.91d0f4eb.95c93114.ttf");
 }
 
 * {
@@ -103,7 +103,7 @@ header nav {
 .hero {
   height: 95vh;
   width: 100%;
-  background-image: url("hero bg.166fa29a.png");
+  background-image: url("hero bg.166fa29a.ef8a0283.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -123,7 +123,7 @@ header nav {
 .about-container {
   height: 100vh;
   width: 100%;
-  background-image: url("info bg.3926b87b.png");
+  background-image: url("info bg.3926b87b.a392c553.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -479,4 +479,4 @@ footer .footer-container .social-container .social-img-container img {
   height: 100%;
 }
 
-/*# sourceMappingURL=index.574c7455.css.map */
+/*# sourceMappingURL=index.36bb7852.css.map */
